@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Thank you</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header text-wrap>
+      <h2>Registration is complete!</h2>
+      <h2><p>Thank you {{ name }}</p></h2>
+      <ion-icon name="thumbs-up"></ion-icon>
+    </ion-card-header>
+    <ion-card-content>
+      <button ion-button color="secondary" round (click)="onOrder()">Continue</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

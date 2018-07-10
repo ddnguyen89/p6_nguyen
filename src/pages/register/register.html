@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="onRegister(f, name.value)">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Name</ion-label>
+        <ion-input
+          type="text"
+          ngModel
+          name="name"
+          required
+          placeholder="John Doe"
+          #name></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Email</ion-label>
+        <ion-input
+          type="email"
+          ngModel
+          name="email"
+          required
+          placeholder="jdoe@email.com"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Phone</ion-label>
+        <ion-input
+          type="tel"
+          ngModel
+          name="phone"
+          placeholder="5555555555"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input
+          type="password"
+          ngModel
+          name="password"
+          required
+          [minlength]="6"
+          placeholder="min length: 6"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block color="secondary" type="submit" [disabled]="!f.valid">Register</button>
+  </form>
+</ion-content>
